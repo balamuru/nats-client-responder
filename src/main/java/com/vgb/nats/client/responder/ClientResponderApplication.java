@@ -11,16 +11,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 
 @SpringBootApplication
 @EnableConfigurationProperties(NatsConfigProperties.class)
-public class ClientResponderApplication implements ApplicationRunner {
-    @Autowired
-    private NatsClientListener natsClientListener;
-
+public class ClientResponderApplication {
     public static void main(String[] args) {
         SpringApplication.run(ClientResponderApplication.class, args);
     }
 
-    @Override
-    public void run(ApplicationArguments args) throws Exception {
-        natsClientListener.listen();
-    }
 }

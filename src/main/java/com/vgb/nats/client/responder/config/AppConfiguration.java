@@ -14,7 +14,7 @@ public class AppConfiguration {
     @Autowired
     private NatsConfigProperties natsConfigProperties;
 
-    @Bean
+    @Bean("connection")
     Connection connection() throws IOException, InterruptedException {
         return Nats.connect(natsConfigProperties.getUri());
     }
