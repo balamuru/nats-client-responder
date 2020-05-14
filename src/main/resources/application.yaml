@@ -1,0 +1,6 @@
+nats:
+  uri: nats://localhost:4222
+  subjectsAndResponses:
+    sub.foo.1: '{name: "John", age: 31, city: "New York"}'
+    sub.foo.2: '{status: "DOOM"}'
+    sub.bar.1:
